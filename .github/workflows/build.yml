@@ -46,16 +46,17 @@ jobs:
         run: pyinstaller --noconfirm --clean 砚.spec
       - name: 改名
         shell: bash
-        run: mv dist/砚.exe 砚-Windows-x86_64.exe
+        # 用英文名：GitHub 的 Release 附件会吞中文字符（"砚.exe"变成"-Windows-x86_64.exe"）
+        run: mv dist/砚.exe yan-Windows-x86_64.exe
       - uses: actions/upload-artifact@v4
         with:
           name: yan-windows
-          path: 砚-Windows-x86_64.exe
+          path: yan-Windows-x86_64.exe
       - name: 发布到 Release
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
         with:
-          files: 砚-Windows-x86_64.exe
+          files: yan-Windows-x86_64.exe
 
   build-linux:
     needs: [secret-scan, test]
@@ -76,16 +77,16 @@ jobs:
         run: pyinstaller --noconfirm --clean 砚.spec
       - name: 改名
         run: |
-          mv dist/砚 砚-Linux-x86_64
-          chmod +x 砚-Linux-x86_64
+          mv dist/砚 yan-Linux-x86_64
+          chmod +x yan-Linux-x86_64
           # 不在 CI 里真的启动它：这是窗口程序，会挂住 runner。
           # 依赖是否齐全靠上面 import tkinter 那步 + 打包日志里的 missing 告警判断。
       - uses: actions/upload-artifact@v4
         with:
           name: yan-linux
-          path: 砚-Linux-x86_64
+          path: yan-Linux-x86_64
       - name: 发布到 Release
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
         with:
-          files: 砚-Linux-x86_64
+          files: yan-Linux-x86_64
