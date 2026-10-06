@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-un"
+version = "0.1.0"
+description = "AIUN — AI 联合国：让多个模型互相质询、答辩、表决，输出带保留异议的决议"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = ["PyYAML"]
+
+[project.scripts]
+aiun = "aiun.cli:main"
+aiun-gui = "aiun.gui:main"
+
+[tool.setuptools]
+packages = ["aiun"]

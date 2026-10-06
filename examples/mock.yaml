@@ -1,0 +1,48 @@
+# 零成本配置：全部用 Mock 代表，不需要任何 API key
+# 用途：先验证流程是你要的，再换成真模型
+# 运行：aiun deliberate "你的议题" --config examples/mock.yaml
+
+max_rounds: 2
+anonymize: true
+
+chair:
+  provider: mock
+  model: mock-chair
+
+delegates:
+  - name: 代表A
+    role: proposer
+    provider: mock
+    model: mock-a
+  - name: 代表B
+    role: adversary
+    provider: mock
+    model: mock-b
+  - name: 代表C
+    role: reviewer
+    provider: mock
+    model: mock-c
+
+providers:
+  mock: {type: mock}
+
+
+# ──────────────────────────────────────────────
+# 真模型配置：跨模型家族才有意义
+#
+# max_rounds: 2
+# anonymize: true
+#
+# chair:
+#   provider: openai
+#   model: gpt-4o-mini
+#
+# delegates:
+#   - {name: 代表A, role: proposer,  provider: openai,    model: gpt-4o-mini}
+#   - {name: 代表B, role: adversary, provider: anthropic, model: claude-sonnet-4-20250514}
+#   - {name: 代表C, role: reviewer,  provider: ollama,    model: qwen2.5:14b}
+#
+# providers:
+#   openai:    {type: openai,    base_url: https://api.openai.com/v1, api_key_env: OPENAI_API_KEY}
+#   anthropic: {type: anthropic, api_key_env: ANTHROPIC_API_KEY}
+#   ollama:    {type: openai,    base_url: http://localhost:11434/v1}
