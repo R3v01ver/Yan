@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 R41N
+Copyright (c) 2026 R41N (GitHub: R3v01ver)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,24 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+## 附加声明 / Additional Notice
+
+上面是标准的 MIT 许可证全文（未作任何改动）。以下声明**不是**对 MIT 的附加条件，
+只是把使用边界讲清楚，与 MIT 一并生效：
+
+1. **输出不构成专业建议。** 本软件产出的一切内容都是模型生成的文本，不是法律、医疗、
+   金融、安全、工程等任何领域的专业意见，请勿据此直接作出高风险决策。
+2. **费用由使用者自负。** 接入真模型后产生的一切 API 调用费用由使用者承担。
+3. **密钥由使用者自管。** API key 只存在使用者本机，作者无法接触，也不承担保管责任。
+4. **模型内容归模型厂商。** 幻觉、偏见、有害内容均为模型自身行为。
+
+完整条款见仓库中的 [DISCLAIMER.md](DISCLAIMER.md)。
+
+*The above is the unmodified MIT License text. The notice below adds no conditions to it;
+it merely clarifies the boundaries of use and takes effect alongside the MIT License:
+(1) all output is model-generated text and is not professional advice; (2) the user bears
+all API costs; (3) the user safeguards their own API keys; (4) model output is the model
+provider's responsibility. Full terms: DISCLAIMER.md.*

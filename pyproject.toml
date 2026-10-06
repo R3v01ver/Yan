@@ -9,6 +9,7 @@ description = "AIUN — AI 联合国：让多个模型互相质询、答辩、�
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
+authors = [{ name = "R41N", email = "103627226+R3v01ver@users.noreply.github.com" }]
 dependencies = ["PyYAML"]
 
 [project.scripts]
